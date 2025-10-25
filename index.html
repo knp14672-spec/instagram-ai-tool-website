@@ -1,1 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nearby (consent) — 100m Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <main class="card">
+    <h1>Nearby Instagram (consent only)</h1>
+    <p class="subtitle">Only shows other users who voluntarily share their handle and location.</p>
 
+    <label>Display name
+      <input id="name" placeholder="Your name (optional)" />
+    </label>
+
+    <label>Instagram handle
+      <input id="ig" placeholder="@your_ig" />
+    </label>
+
+    <div class="row">
+      <button id="startBtn">Start sharing location</button>
+      <button id="stopBtn" disabled>Stop</button>
+    </div>
+
+    <section class="status" id="status">Not sharing</section>
+
+    <h2>Nearby consenting users (≤ 100 m)</h2>
+    <ul id="nearbyList" class="nearbyList"></ul>
+
+    <footer class="small">Privacy note: This demo does not publish your data publicly. Use with consent.</footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
